@@ -1,8 +1,8 @@
 # Ring-RPQ
 
-Repository for the prototype source code of the paper Time- and Space-Efficient Regular Path Queries on Graphs.
+Repository for the prototype source code of the paper Time- and Space-Efficient Regular Path Queries on Graphs. This is just a prototype version aiming at reproducing the experiments of the paper. A final version will be added soon. 
 
-Instructions
+## Instructions
 
 To run our code, please install an extended version of the library SDSL. Go to this [this repository](https://github.com/darroyue/sdsl-lite) and follow the instructions.
 
@@ -27,4 +27,3 @@ This will create the index on the same directory were the wikidata file is. Keep
 ```Bash
 ./query-index <path-to-index-file> data/paths.tsv 
 ```
-
