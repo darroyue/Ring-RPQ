@@ -21,6 +21,7 @@ This shall create two executable files: build-index and query-index.
 ./build-index <path-to-wikidata-file> 
 ```
 This will create the index on the same directory were the wikidata file is. Keep all these files in the same directory.
+
 4. Move files data/wikidata-enumerated.dat.P and data/wikidata-enumerated.dat.SO to the directory were the index is stored. Please keep these file names, or change them acordingly, keeping the same prefix for all of them.   
 5. To run queries, do as follows:
 ```Bash
