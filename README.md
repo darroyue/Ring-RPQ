@@ -1,6 +1,6 @@
 # Ring-RPQ
 
-Repository for the prototype source code of the paper Time- and Space-Efficient Regular Path Queries on Graphs. This is just a prototype version aiming at reproducing the experiments of the paper. A final version will be added soon.
+Repository for the prototype source code of the paper Time- and Space-Efficient Regular Path Queries on Graphs. This repository aims at reproducing the experiments of the paper.
 
 ## Queries and graph
 
@@ -8,7 +8,7 @@ The queries are available in data/paths.tsv of this repository.
 
 The data used are available here: [Wikidata (about 1000M triples)](http://compact-leapfrog.tk/files/wikidata-enumerated.dat.gz).
 
-## Instructions
+## Instructions for running the ring
 
 To run our code, please install an extended version of the library SDSL. Go to this [this repository](https://github.com/darroyue/sdsl-lite) and follow the instructions.
 
@@ -35,3 +35,10 @@ This will create the index on the same directory were the wikidata file is. Keep
 ```Bash
 ./query-index <path-to-index-file> data/paths.tsv 
 ```
+
+## Running other systems
+
+You can find scripts and instructions on [how to run the benchmark for Blazegraph, Jena, Virtuoso on the following page](http://compact-leapfrog.tk/) in the section "Instructions for using SPARQL Engines". Note that we did not include RDF3x in these experients as it does not support RPQs. You can follow the same instructions, but rather use the RPQ queries from this repository. Please note that RPQs were run under `DISTINCT`/set semantics for comparability (in SPARQL, while queries like `:p*` are defined under set semantics, queries like `:p/:q`, `:p|:q`, etc., are rewritten to joins, unions, etc., that use bag semantics).
+
+For the Datalog engine, you can find code to convert RPQs to Datalog and the optimisations [in the following repository](https://github.com/aidhog/rpqs-to-datalog).
+
